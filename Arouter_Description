@@ -1,0 +1,26 @@
+一、使用ARouter
+1.	添加依赖：
+所有Module添加依赖 ：api 'com.alibaba:arouter-api:1.5.1'
+使用注解的Module添加 : annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
+2.	子Module的defaultConfig添加
+javaCompileOptions {
+    annotationProcessorOptions {
+        arguments = [ AROUTER_MODULE_NAME : project.getName() ]
+    }
+}
+
+二、组件开发
+1、子Module gradle改成library
+2、去掉applicationId
+3、替换AndroidManifest
+4、App壳中添加所有Module依赖
+5、组件化结构
+
+
+三、独自编译
+1、Module gradle改为application
+2、添加applicationId
+3、AndroidManifest添加入口
+
+
+ARouter项目地址 ： https://github.com/alibaba/ARouter
