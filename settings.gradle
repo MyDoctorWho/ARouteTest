@@ -1,2 +1,2 @@
-include ':BaseModule', ':ModuleA', ':MainModule', ':ModuleB'
+include ':BaseModule', ':ModuleA', ':MainModule', ':ModuleB', ':arouter-annotation','arouter-compiler','arouter-api'
 rootProject.name='ARouteTest'
