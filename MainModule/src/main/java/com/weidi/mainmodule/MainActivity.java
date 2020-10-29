@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ARouter.getInstance().build("/path/moduleA").navigation();
+//                ARouter.getInstance().build("/moduleB/Main").navigation();
             }
         });
     }

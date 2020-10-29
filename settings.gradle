@@ -1,2 +1,2 @@
-include ':BaseModule', ':ModuleA', ':MainModule'
+include ':BaseModule', ':ModuleA', ':MainModule', ':ModuleB'
 rootProject.name='ARouteTest'
