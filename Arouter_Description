@@ -9,6 +9,11 @@ javaCompileOptions {
     }
 }
 
+Arouter的使用：
+拦截器@Interceptor
+@Route
+@Autowired
+
 二、组件开发
 1、子Module gradle改成library
 2、去掉applicationId

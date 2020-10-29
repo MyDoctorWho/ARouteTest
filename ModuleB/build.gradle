@@ -42,4 +42,9 @@ dependencies {
 //    annotationProcessor project(':arouter-compiler')
 
     api project(':BaseModule')
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

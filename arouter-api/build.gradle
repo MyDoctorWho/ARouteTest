@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 ext {
     bintrayName = 'arouter-api'
@@ -44,6 +46,11 @@ dependencies {
 //    api 'com.alibaba:arouter-annotation:1.0.6'
     api project(':arouter-annotation')
     implementation "com.android.support:support-v4:28.0.0"
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
 //
 //apply from: '../install.gradle'
