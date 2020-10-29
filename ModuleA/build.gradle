@@ -1,4 +1,8 @@
-apply plugin: 'com.android.library'
+if(rootProject.ext.isAlone){
+    apply plugin: 'com.android.application'
+}else{
+    apply plugin: 'com.android.library'
+}
 
 android {
     compileSdkVersion 29
@@ -6,7 +10,9 @@ android {
 
 
     defaultConfig {
-//        applicationId "com.weidi.modulea"
+        if (rootProject.ext.isAlone){
+            applicationId "com.weidi.modulea"
+        }
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
@@ -25,6 +31,21 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            //控制两种模式下的资源和代码配置情况
+            if (rootProject.ext.isAlone) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug/**'
+                }
+            }
         }
     }
 
