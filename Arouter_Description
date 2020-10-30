@@ -1,4 +1,9 @@
-一、使用ARouter
+一、组件化开发
+1、什么是组件化开发
+2、组件化开发的好处
+3、组件化结构
+
+二、ARouter
 1.	添加依赖：
 所有Module添加依赖 ：api 'com.alibaba:arouter-api:1.5.1'
 使用注解的Module添加 : annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'
@@ -9,23 +14,13 @@ javaCompileOptions {
     }
 }
 
-Arouter的使用：
-拦截器@Interceptor
+3.组件化配置：
+配置：子Module gradle改成library；2)去掉applicationId；3)替换AndroidManifest；4)App壳中添加所有Module依赖
+
+4.Arouter的使用：
 @Route
 @Autowired
-
-二、组件开发
-1、子Module gradle改成library
-2、去掉applicationId
-3、替换AndroidManifest
-4、App壳中添加所有Module依赖
-5、组件化结构
-
-
-三、独自编译
-1、Module gradle改为application
-2、添加applicationId
-3、AndroidManifest添加入口
+@Interceptor
 
 
 ARouter项目地址 ： https://github.com/alibaba/ARouter
