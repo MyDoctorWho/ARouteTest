@@ -14,6 +14,15 @@ javaCompileOptions {
     }
 }
 
+Kotlin :
+apply plugin: 'kotlin-kapt'
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+
 3.组件化配置：
 配置：子Module gradle改成library；2)去掉applicationId；3)替换AndroidManifest；4)App壳中添加所有Module依赖
 

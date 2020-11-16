@@ -33,10 +33,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    api 'com.alibaba:arouter-api:1.5.1'
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    api project(':arouter-api')
+    api 'com.alibaba:arouter-api:1.5.1'
 }
 repositories {
     mavenCentral()

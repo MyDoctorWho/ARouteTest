@@ -47,6 +47,12 @@ dependencies {
     if (!rootProject.ext.isAlone){
         api project(':ModuleB')
     }
+    if (!rootProject.ext.isAlone){
+        api project(':ModuleC')
+    }
+    if (!rootProject.ext.isAlone){
+        api project(':ModuleD')
+    }
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
